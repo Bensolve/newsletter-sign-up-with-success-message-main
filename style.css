@@ -1,0 +1,395 @@
+/* styles.css (Updated with Mobile-First Styles) */
+:root {
+    /* Colors */
+    --primary-red: hsl(4, 100%, 67%);
+    --neutral-blue-800: hsl(234, 29%, 20%);
+    --neutral-blue-700: hsl(235, 18%, 26%);
+    --neutral-grey: hsl(0, 0%, 58%);
+    --neutral-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-family: 'Roboto', sans-serif;
+    --font-size-base: 16px;
+    /* Body copy base */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Spacing (inferred mobile-first scale) */
+    --spacing-xs: 0.25rem;
+    /* 4px */
+    --spacing-sm: 0.5rem;
+    /* 8px */
+    --spacing-md: 1rem;
+    /* 16px */
+    --spacing-lg: 1.5rem;
+    /* 24px */
+    --spacing-xl: 2rem;
+    /* 32px */
+
+    /* Sizing (inferred) */
+    --border-radius-sm: 0.25rem;
+    /* 4px */
+    --border-radius-md: 0.5rem;
+    /* 8px */
+    --max-width: 90rem;
+    /* 1440px, scaled down for mobile */
+    --container-padding: var(--spacing-md);
+    /* 16px */
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    background-color: var(--neutral-blue-800);
+    color: var(--neutral-blue-800);
+
+}
+
+
+/* Subscription Section (Mobile-First) */
+
+
+.subscription__container {
+    background-color: var(--neutral-white);
+
+    display: flex;
+    flex-direction: column-reverse;
+
+
+}
+
+.subscription__content {
+    padding-inline: var(--spacing-lg);
+}
+
+.subscription__title {
+    font-size: 2.8rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--neutral-blue-800);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subscription__description {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: var(--spacing-md);
+}
+
+.subscription__list {
+    list-style: none;
+    /* Remove default bullets */
+    margin-bottom: var(--spacing-lg);
+}
+
+.subscription__list-item {
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--neutral-blue-800);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.subscription__list-icon {
+    flex-shrink: 0;
+    /* Prevents icon from shrinking */
+    width: 1.25rem;
+    /* 20px */
+    height: 1.25rem;
+    /* 20px */
+    margin-top: 0.125rem;
+    /* Aligns icon with text */
+}
+
+
+
+
+.subscription__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.subscription__label {
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: var(--font-weight-bold);
+    color: var(--neutral-blue-800);
+    margin-bottom: -.93rem;
+}
+
+.subscription__input {
+    font-size: 0.875rem;
+    /* 14px for placeholder */
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: 1px solid var(--neutral-grey);
+    border-radius: var(--border-radius-md);
+    outline: none;
+}
+
+.subscription__input:valid {
+    background-color: rgba(40, 167, 69, 0.1);
+    /* Light green hint */
+}
+
+.subscription__input:user-invalid {
+    background-color: rgba(220, 53, 69, 0.1);
+    /* Light red hint */
+}
+
+.subscription__input:hover {
+    border-color: var(--neutral-blue-700);
+}
+
+.subscription__input:focus {
+    border-color: var(--neutral-blue-700);
+    box-shadow: 0 0 0 2px rgba(35, 56, 115, 0.2);
+    /* Accessible focus ring */
+}
+
+.subscription__error {
+    display: none;
+    /* Hidden by default */
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.subscription__error--visible {
+    display: block;
+    /* Show when invalid */
+}
+
+.subscription__button {
+    font-size: var(--font-size-base);
+    /* 16px */
+    font-weight: var(--font-weight-bold);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--neutral-blue-800);
+    color: var(--neutral-white);
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+}
+
+.subscription__button:hover {
+    background-color: var(--primary-red);
+}
+
+
+.subscription__button:focus {
+    outline: none;
+    /* Remove default outline */
+    box-shadow: 0 0 0 2px var(--neutral-white), 0 0 0 4px var(--primary-red);
+    /* Custom focus ring */
+}
+
+
+.subscription__illustration {
+    width: 100%;
+    /* Full width of parent */
+    padding-block: 0;
+    /* No padding by default */
+}
+
+/* Ensure picture and image stretch responsively */
+.subscription__picture {
+    width: 100%;
+    /* Fills the container */
+    display: block;
+    /* Prevents spacing issues */
+}
+
+.subscription__graphic {
+    width: 100%;
+    /* Stretches to full width */
+    height: auto;
+    /* Maintains aspect ratio, no distortion or quality loss for SVGs */
+    display: block;
+    /* Removes inline spacing */
+}
+
+
+
+
+
+.subscription-success {
+    display: block;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.subscription-success--hidden {
+    display: none;
+}
+
+.subscription-success__container {
+    margin-top: 5rem;
+    padding: 2rem;
+
+
+}
+
+.subscription-success__icon {
+    height: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+.subscription-success__title {
+    color: var(--neutral-blue-800);
+    font-size: 2.3rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+
+}
+
+.subscription-success__description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 7em;
+}
+
+.subscription-success__dismiss {
+    background-color: var(--neutral-blue-800);
+    color: var(--neutral-white);
+    display: inline-block;
+    border: none;
+    padding: .9rem 2rem;
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-regular);
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 100%;
+
+
+}
+
+.subscription-success__dismiss:hover,
+.subscription-success__dismiss:active {
+    background-color: var(--primary-red);
+}
+
+@media (min-width: 48em) {
+    .subscription {
+
+        margin-top: 2rem;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        /* 1440px */
+
+        /* Center on big screen */
+    }
+
+    .subscription__container {
+
+        border-radius: 2rem;
+        flex-direction: row;
+        /* Two-column layout */
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        /* Space between columns */
+    }
+
+    .subscription__illustration {
+        flex: 1;
+        /* Your original flex value */
+        display: flex;
+        /* Enable centering */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        padding-block: 2rem;
+        
+        /* Your original padding */
+        width: auto;
+        /* Let flex control width, not full stretch */
+    }
+
+
+    .subscription__graphic {
+        width: auto;
+        max-width: 100%;
+        
+    }
+
+    .subscription__content {
+        width: 50%;
+        /* Half width for content */
+        padding: var(--spacing-lg);
+    }
+
+    .subscription__title {
+        font-size: 2.5rem;
+        /* Larger heading */
+    }
+
+    .subscription__description {
+        font-size: 1.125rem;
+        /* Slightly larger subtext */
+    }
+
+    .subscription__list {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .subscription__form {
+        gap: var(--spacing-lg);
+    }
+
+    .subscription-success {
+        min-height: 0;
+        display: block;
+        border-radius: 2rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .subscription-success--hidden {
+        display: none;
+    }
+
+    .subscription-success__container {
+        margin-top: 9rem;
+        padding-inline: 2.5rem;
+    }
+
+    .subscription-success__icon {
+        height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .subscription-success__title {
+        margin-bottom: 1rem;
+    }
+
+
+    .subscription-success__description {
+        font-size: .89rem;
+        margin-bottom: 2.5rem;
+
+    }
+}

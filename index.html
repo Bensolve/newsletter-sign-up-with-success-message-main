@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
 </head>
+
 <body>
+  <!-- Sign-up Form (Currently Visible) -->
+  <section class="subscription" role="region" aria-label="Newsletter Subscription" aria-hidden="false">
+    <div class="subscription__container">
+      <div class="subscription__content">
+        <h1 class="subscription__title">Stay updated!</h1>
+        <p class="subscription__description">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="subscription__list">
+          <li class="subscription__list-item subscription__list-item--active" aria-checked="true">
+            <img src="assets/images/icon-list.svg" alt="" class="subscription__list-icon" aria-hidden="true">
+            <span class="subscription__list-text">Product discovery and building what matters</span>
+          </li>
+          <li class="subscription__list-item subscription__list-item--active" aria-checked="true">
+            <img src="assets/images/icon-list.svg" alt="" class="subscription__list-icon" aria-hidden="true">
+            <span class="subscription__list-text">Measuring to ensure updates are a success</span>
+          </li>
+          <li class="subscription__list-item subscription__list-item--active" aria-checked="true">
+            <img src="assets/images/icon-list.svg" alt="" class="subscription__list-icon" aria-hidden="true">
+            <span class="subscription__list-text">And much more!</span>
+          </li>
+        </ul>
+        <form class="subscription__form" action="#" method="post" >
+          <label for="email" class="subscription__label visually-hidden">Email address</label>
+          <span class="subscription__error">Please enter a valid email address</span>
+          <input type="email" id="email" name="email" class="subscription__input" placeholder="email@company.com"
+            required aria-required="true" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
 
-  <!-- Sign-up form start -->
+          <button type="submit" class="subscription__button">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+      <div class="subscription__illustration">
+        <picture class="subscription__picture">
+          <source srcset="assets/images/illustration-sign-up-desktop.svg" type="image/svg+xml" media="(min-width: 1024px)">
+          <source srcset="assets/images/illustration-sign-up-tablet.svg" type="image/svg+xml" media="(min-width: 768px)">
+          <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="subscription__graphic" aria-hidden="true">
+        </picture>
+      </div>
+    </div>
+  </section>
 
-  Stay updated!
+  <!-- Success Message (Currently Hidden) -->
+  <section class="subscription-success subscription-success--hidden" role="region"
+    aria-label="Subscription Confirmation" aria-hidden="true">
+    <div class="subscription-success__container">
+      <img src="assets/images/icon-success.svg" alt="" class="subscription-success__icon" aria-hidden="true">
+      <h1 class="subscription-success__title">Thanks for subscribing!</h1>
+      <p class="subscription-success__description">A confirmation email has been sent to <strong> ash@loremcompany.com.
+        </strong> Please
+        open it and click the button inside to confirm your subscription.</p>
+      <button class="subscription-success__dismiss" aria-label="Dismiss success message">Dismiss message</button>
+    </div>
+  </section>
 
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <!-- Attribution -->
+  <!-- <footer class="attribution" role="contentinfo">
+    <p class="attribution__text">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        class="attribution__link">Frontend Mentor</a>. Coded by <a href="#" class="attribution__link">Your Name
+        Here</a>.</p>
+  </footer> -->
 </body>
+
 </html>
