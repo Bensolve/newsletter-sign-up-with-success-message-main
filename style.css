@@ -163,7 +163,9 @@ body {
     /* Hidden by default */
     color: red;
     font-size: 0.9em;
-    margin-top: 5px;
+
+    margin-top: 0.3125rem;
+
 }
 
 .subscription__error--visible {
@@ -323,7 +325,7 @@ body {
         align-items: center;
         /* Center vertically */
         padding-block: 2rem;
-        
+
         /* Your original padding */
         width: auto;
         /* Let flex control width, not full stretch */
@@ -333,7 +335,7 @@ body {
     .subscription__graphic {
         width: auto;
         max-width: 100%;
-        
+
     }
 
     .subscription__content {
