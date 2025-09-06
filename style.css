@@ -227,7 +227,7 @@ body {
 
 
 .subscription-success {
-    display: block;
+    /* display: block; */
     background-color: white;
     min-height: 100vh;
     display: flex;
