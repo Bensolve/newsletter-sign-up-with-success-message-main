@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   signupForm.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent page reload
     const emailInput = document.querySelector("#email").value;
-    const emailRegex = /^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/i;
+   
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
 
     // Reset error state
     errorMessage.classList.remove("subscription__error--visible");
