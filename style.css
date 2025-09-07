@@ -7,6 +7,10 @@
     --neutral-grey: hsl(0, 0%, 58%);
     --neutral-white: hsl(0, 0%, 100%);
 
+    --good-green: rgba(40, 167, 69, 0.1);
+    --bad-red: rgba(220, 53, 69, 0.1);
+       
+
     /* Typography */
     --font-family: 'Roboto', sans-serif;
     --font-size-base: 16px;
@@ -139,13 +143,13 @@ body {
 }
 
 .subscription__input:valid {
-    background-color: rgba(40, 167, 69, 0.1);
-    /* Light green hint */
+    background-color: var(--good-green);
+    
 }
 
 .subscription__input:user-invalid {
-    background-color: rgba(220, 53, 69, 0.1);
-    /* Light red hint */
+    background-color: var(--bad-red);
+    
 }
 
 .subscription__input:hover {
